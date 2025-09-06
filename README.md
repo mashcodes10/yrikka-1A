@@ -6,7 +6,7 @@ This repository contains the datasets and specifications for the YRIKKA Challeng
 
 ## Dataset Structure
 
-We have two BTT (Beyond the Thing) datasets with comprehensive contextual annotations:
+We have two BTT datasets with comprehensive contextual annotations:
 
 ### Dataset 1: `852a64c6-4bd3-495f-8ff7-f5cc85e34316`
 - **Images**: 497 PNG files
@@ -154,10 +154,3 @@ Please follow these guidelines when contributing:
 - Include tests for new functionality
 - Update documentation as needed
 
-## License
-
-[To be determined based on project requirements]
-
-## Contact
-
-[Team contact information to be added]
