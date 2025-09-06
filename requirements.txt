@@ -1,0 +1,48 @@
+# Core dependencies for YRIKKA Challenge Project
+
+# Data manipulation and analysis
+numpy>=1.21.0
+pandas>=1.3.0
+
+# Computer vision and image processing
+opencv-python>=4.5.0
+Pillow>=8.3.0
+
+# Machine learning frameworks
+torch>=1.9.0
+torchvision>=0.10.0
+tensorflow>=2.6.0
+
+# COCO dataset utilities
+pycocotools>=2.0.4
+
+# Data visualization
+matplotlib>=3.4.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Scientific computing
+scipy>=1.7.0
+scikit-learn>=1.0.0
+
+# Progress bars and utilities
+tqdm>=4.62.0
+
+# YAML configuration files
+PyYAML>=5.4.0
+
+# Logging and monitoring
+wandb>=0.12.0  # For experiment tracking (optional)
+
+# Development tools
+black>=21.0.0  # Code formatting
+flake8>=3.9.0  # Linting
+pytest>=6.2.0  # Testing
+
+# Additional utilities
+pathlib2>=2.3.0  # For path manipulation
+argparse>=1.4.0  # Command line argument parsing
