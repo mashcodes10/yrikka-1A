@@ -1,0 +1,9 @@
+Metric,Value
+Total Images,993
+Total Predictions,3105
+Average Predictions per Image,3.13
+Images with No Detections,25
+Images with Low Confidence,487
+Average Confidence Score,0.655
+Minimum Confidence Score,0.250
+Maximum Confidence Score,0.994
