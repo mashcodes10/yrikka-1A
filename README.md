@@ -164,3 +164,15 @@ This project is fully contained in a Colab notebook.
 4. Run all cells sequentially to train and evaluate the model.
 5. Results will appear in the notebook output.
 
+## Results and Key Findings
+coming soon....
+
+## Visualizations
+coming soon....
+
+## Potential Next Steps
+coming soon....
+
+## Individual Contributions
+coming soon....
+
