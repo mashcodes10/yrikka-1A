@@ -154,3 +154,13 @@ Please follow these guidelines when contributing:
 - Include tests for new functionality
 - Update documentation as needed
 
+## How to Run the Project
+
+This project is fully contained in a Colab notebook.
+
+1. Open `newYrikkaProject.ipynb` in [Google Colab](https://colab.research.google.com/).
+2. Install dependencies by running the first cell.
+3. Load the datasets using `dataset_loader.py`.
+4. Run all cells sequentially to train and evaluate the model.
+5. Results will appear in the notebook output.
+
