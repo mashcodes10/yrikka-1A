@@ -123,11 +123,12 @@ print(f"Dataset 1: {len(dataset1['images'])} images")
 
 ## Project Goals
 
-Based on the dataset structure, this project appears to focus on:
+Bridging the synthetic-to-real (syn2real) data gap in object detection:  
 - **Object Detection**: Identifying and localizing objects in images
 - **Contextual Understanding**: Leveraging scene context, lighting, and occlusion information
 - **Multi-label Classification**: Handling images with multiple objects
 - **Robust Recognition**: Working with various lighting conditions and occlusions
+- Improve YOLO’s mAP@50 by +0.10 over the baseline model  
 
 ## Data Analysis Tasks
 
@@ -171,7 +172,8 @@ coming soon....
 coming soon....
 
 ## Potential Next Steps
-coming soon....
+1. Correct the class imbalance found in our data
+2. Fine tune the model further by utilizing the synthetic images from the YRIKKA data engine  
 
 ## Individual Contributions
 coming soon....
