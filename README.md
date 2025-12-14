@@ -179,5 +179,5 @@ coming soon....
 coming soon....
 
 ## Acknowledgements
-We would like to thank our Challenge Advisors as well as our AI Studio Coach for all their help and support throughout the entire project.
+We would like to thank our Challenge Advisors as well as our AI Studio Coach for all of their help and support throughout the entire project.
 
