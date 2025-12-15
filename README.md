@@ -1,24 +1,53 @@
-# YRIKKA Challenge Project - Fall 2025 AI Studio
+# YRIKKA 1A - Bridging the Synthetic to Real Data Gap
 
-## Project Overview
+## 🏗️ **Project Overview**
 
-This repository contains the datasets and specifications for the YRIKKA Challenge project, focusing on computer vision and object detection with contextual information.
+This project was completed as part of the Break Through Tech AI Program in collaboration with the host company YRIKKA. The focus of the project was to address the synthetic-to-real (syn2real) data gap in object detection, where models trained on synthetic data often struggle on real-world images. We used a YOLO-based object detection model to detect five everyday objects: potted plant, chair, cup, vase, and book. The model’s performance was evaluated on synthetic data with intentionally noisy or missing annotations to better reflect real-world labeling challenges. Labels were corrected using CVAT, and model behavior was analyzed using a set of challenging real-world test images. New synthetic data was then generated using YRIKKA’s engine to refine the model and improve its real-world performance.
 
-## Dataset Structure
+---
+
+### 👥 **Team Members**
+
+
+| Name             | GitHub Handle | Contribution                                                             |
+|------------------|---------------|--------------------------------------------------------------------------|
+| Milderd Nwachukwu-Innocent   | @Mildred1999 | Model training and evaluation, hyperparameter tuning, correct CVAT annotation, EDA, Image collection |
+| Katherin Cuautli   | @KatherinCuautli  | Image collection, correct CVAT annotation |
+| Taanyaa Haridass Prasad  | @taanyaaharidassprasad06  | Image collection, correct CVAT annotation |
+| Idranne Naike      | @    | Image Collection, correct CVAT annotation  |
+| Dedeepya Pidaparthi       | @dpidaparthi | Image Collection, correct CVAT annotation |
+| Md. Mashiur Rahman Khan   | @mashcodes10 | Collect images from data engine, collect real world images |
+| Maha Shanawaz Syeda     | @mahashanawaz | Data Cleaning, Data Preprocessing, Baseline model comparison, Model Optimization, EDA, Image collection |
+
+
+---
+## 🎯 **Project Highlights**
+
+**Example:**
+
+- Developed a YOLO-based object detection model to study the synthetic-to-real data gap in detecting everyday objects.
+- Evaluated model performance using noisy and corrected synthetic labels, showing how label quality affects real-world results.
+- GUsed CVAT for label correction and YRIKKA’s synthetic data engine to improve training data and model reliability.
+
+---
+
+## 📊 **Data Exploration**
+
+### Dataset Structure
 
 We have two BTT datasets with comprehensive contextual annotations:
 
-### Dataset 1: `852a64c6-4bd3-495f-8ff7-f5cc85e34316`
+#### Dataset 1: `852a64c6-4bd3-495f-8ff7-f5cc85e34316`
 - **Images**: 497 PNG files
 - **Annotations**: COCO format JSON with contextual metadata
 - **Categories**: 10 object classes
 
-### Dataset 2: `8e0a5d2d-3ae0-4ff0-b6ee-2d85f7da4fee`
+#### Dataset 2: `8e0a5d2d-3ae0-4ff0-b6ee-2d85f7da4fee`
 - **Images**: 496 PNG files  
 - **Annotations**: COCO format JSON with contextual metadata
 - **Categories**: 10 object classes
 
-## Object Categories
+### Object Categories
 
 The datasets include the following object categories:
 - **Chair** - Furniture seating
@@ -28,7 +57,7 @@ The datasets include the following object categories:
 - **Book** - Reading materials
 - **Pot** - Cooking/storage containers
 
-## Contextual Information
+### Contextual Information
 
 Each image includes rich contextual metadata:
 
@@ -55,6 +84,12 @@ Each image includes rich contextual metadata:
 }
 ```
 
+## Visualizations
+
+<img width="628" height="351" alt="Screenshot 2025-12-06 120209" src="https://github.com/user-attachments/assets/75feb504-725e-4019-83f6-82a1d9111a49" />
+
+
+---
 ## Repository Structure
 
 ```
@@ -106,14 +141,27 @@ def load_dataset(dataset_id):
 dataset1, img_dir1 = load_dataset("852a64c6-4bd3-495f-8ff7-f5cc85e34316")
 print(f"Dataset 1: {len(dataset1['images'])} images")
 ```
+---
 
-## Team Collaboration
+## 👩🏽‍💻 **Setup and Installation**
 
 ### Setting up the repository
 1. Clone this repository
 2. Create a virtual environment
 3. Install dependencies
 4. Start working on your assigned tasks
+
+### How to Run the Project
+
+This project is fully contained in a Colab notebook.
+
+1. Open `newYrikkaProject.ipynb` in [Google Colab](https://colab.research.google.com/).
+2. Install dependencies by running the first cell.
+3. Load the datasets using `dataset_loader.py`.
+4. Run all cells sequentially to train and evaluate the model.
+5. Results will appear in the notebook output.
+
+---
 
 ### Git Workflow
 1. Create feature branches for new work
@@ -155,28 +203,14 @@ Please follow these guidelines when contributing:
 - Include tests for new functionality
 - Update documentation as needed
 
-## How to Run the Project
-
-This project is fully contained in a Colab notebook.
-
-1. Open `newYrikkaProject.ipynb` in [Google Colab](https://colab.research.google.com/).
-2. Install dependencies by running the first cell.
-3. Load the datasets using `dataset_loader.py`.
-4. Run all cells sequentially to train and evaluate the model.
-5. Results will appear in the notebook output.
 
 ## Results and Key Findings
 coming soon....
 
-## Visualizations
-coming soon....
 
 ## Potential Next Steps
 1. Correct the class imbalance found in our data
 2. Fine tune the model further by utilizing the synthetic images from the YRIKKA data engine  
-
-## Individual Contributions
-coming soon....
 
 ## Acknowledgements
 We would like to thank our Challenge Advisors as well as our AI Studio Coach for all of their help and support throughout the entire project.
