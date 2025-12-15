@@ -23,12 +23,18 @@ This project was completed as part of the Break Through Tech AI Program in colla
 ---
 ## 🎯 **Project Highlights**
 
-**Example:**
-
 - Developed a YOLO-based object detection model to study the synthetic-to-real data gap in detecting everyday objects.
 - Evaluated model performance using noisy and corrected synthetic labels, showing how label quality affects real-world results.
-- GUsed CVAT for label correction and YRIKKA’s synthetic data engine to improve training data and model reliability.
+- Used CVAT for label correction and YRIKKA’s synthetic data engine to improve training data and model reliability.
 
+### Project Goals
+
+Bridging the synthetic-to-real (syn2real) data gap in object detection:  
+- **Object Detection**: Identifying and localizing objects in images
+- **Contextual Understanding**: Leveraging scene context, lighting, and occlusion information
+- **Multi-label Classification**: Handling images with multiple objects
+- **Robust Recognition**: Working with various lighting conditions and occlusions
+- Improve YOLO’s mAP@50 by +0.10 over the baseline model
 ---
 
 ## 📊 **Data Exploration**
@@ -84,13 +90,17 @@ Each image includes rich contextual metadata:
 }
 ```
 
-## Visualizations
+### Visualizations
+- **Sample CVAT annotations**:
 
+ <img width="436" height="611" alt="Screenshot 2025-12-06 110200" src="https://github.com/user-attachments/assets/01a4a0ae-0181-4093-b3ea-7954e438ec14" />
+
+<img width="761" height="750" alt="Screenshot 2025-12-03 115150" src="https://github.com/user-attachments/assets/55792376-dd76-46d0-984e-31935adbc820" />
+
+- **Training and Validation Losses**:
 <img width="628" height="351" alt="Screenshot 2025-12-06 120209" src="https://github.com/user-attachments/assets/75feb504-725e-4019-83f6-82a1d9111a49" />
 
-
----
-## Repository Structure
+### Repository Structure
 
 ```
 yrikka/
@@ -109,8 +119,67 @@ yrikka/
 ├── requirements.txt                   # Python dependencies
 └── .gitignore                         # Git ignore file
 ```
+---
 
-## Getting Started
+## 🧠 **Model Development**
+### Model Used
+- YOLOv11 object detection model for multi-class detection of five everyday objects
+- Utilized pretrained weights for transfer learning
+
+### Feature Selection and Hyperparameter Tuning
+- Feature extraction handled automatically by the YOLO architecture
+- Hyperparameters (learning rate, number of epochs) tuned through iterative experimentation
+- Focused on improving generalization from synthetic to real-world data
+
+### Training Setup and Baseline Performance
+- Dataset split: **80% training (≈790 images)**, **20% validation (≈199 images)**
+- **200 manually collected real-world images** used as a held-out test set
+- Evaluation metrics: Precision, Recall, mAP@50, mAP@50–95
+
+**Baseline Performance:**
+- Precision: **75.3%**
+- Recall: **55.9%**
+- mAP@50: **64.9%**
+- mAP@50–95: **57.5%**
+  
+---
+## 📈 **Results & Key Findings**
+- **Potted Plant showed the strongest improvement**, with higher recall and mAP@50 after fine-tuning, indicating better generalization for this class.
+- **Vase performance improved overall**, especially in recall and mAP, suggesting fine-tuning helped the model better distinguish this object.
+- **Cup, Chair, and Book saw performance drops**, particularly in recall and mAP, highlighting uneven gains from fine-tuning and remaining challenges in syn2real transfer.
+
+<img width="912" height="489" alt="Screenshot 2025-12-14 221923" src="https://github.com/user-attachments/assets/4d15ede9-68cd-485f-991f-f7d049186fff" />
+
+
+<img width="858" height="406" alt="Screenshot 2025-12-14 222957" src="https://github.com/user-attachments/assets/35ab789e-761d-48f2-b729-ed212f93295a" />
+
+---
+
+## 🚀 **Next Steps**
+1. Correct the class imbalance found in our data
+2. Fine tune the model further by utilizing the synthetic images from the YRIKKA data engine
+
+---
+
+## 👩🏽‍💻 **Setup and Installation**
+
+### Setting up the repository
+1. Clone this repository
+2. Create a virtual environment
+3. Install dependencies
+4. Start working on your assigned tasks
+
+### How to Run the Project
+
+This project is fully contained in a Colab notebook.
+
+1. Open `newYrikkaProject.ipynb` in [Google Colab](https://colab.research.google.com/).
+2. Install dependencies by running the first cell.
+3. Load the datasets using `dataset_loader.py`.
+4. Run all cells sequentially to train and evaluate the model.
+5. Results will appear in the notebook output.
+
+### Getting Started
 
 ### Prerequisites
 ```bash
@@ -141,59 +210,8 @@ def load_dataset(dataset_id):
 dataset1, img_dir1 = load_dataset("852a64c6-4bd3-495f-8ff7-f5cc85e34316")
 print(f"Dataset 1: {len(dataset1['images'])} images")
 ```
----
-
-## 👩🏽‍💻 **Setup and Installation**
-
-### Setting up the repository
-1. Clone this repository
-2. Create a virtual environment
-3. Install dependencies
-4. Start working on your assigned tasks
-
-### How to Run the Project
-
-This project is fully contained in a Colab notebook.
-
-1. Open `newYrikkaProject.ipynb` in [Google Colab](https://colab.research.google.com/).
-2. Install dependencies by running the first cell.
-3. Load the datasets using `dataset_loader.py`.
-4. Run all cells sequentially to train and evaluate the model.
-5. Results will appear in the notebook output.
 
 ---
-
-### Git Workflow
-1. Create feature branches for new work
-2. Make small, focused commits
-3. Use descriptive commit messages
-4. Submit pull requests for review
-
-## Project Goals
-
-Bridging the synthetic-to-real (syn2real) data gap in object detection:  
-- **Object Detection**: Identifying and localizing objects in images
-- **Contextual Understanding**: Leveraging scene context, lighting, and occlusion information
-- **Multi-label Classification**: Handling images with multiple objects
-- **Robust Recognition**: Working with various lighting conditions and occlusions
-- Improve YOLO’s mAP@50 by +0.10 over the baseline model  
-
-## Data Analysis Tasks
-
-1. **Exploratory Data Analysis**
-   - Analyze distribution of object categories
-   - Study contextual patterns
-   - Examine lighting and occlusion effects
-
-2. **Model Development**
-   - Implement object detection models
-   - Incorporate contextual information
-   - Handle multi-label scenarios
-
-3. **Evaluation**
-   - Define appropriate metrics
-   - Test robustness across contexts
-   - Compare different approaches
 
 ## Contributing
 
@@ -204,14 +222,6 @@ Please follow these guidelines when contributing:
 - Update documentation as needed
 
 
-## Results and Key Findings
-coming soon....
-
-
-## Potential Next Steps
-1. Correct the class imbalance found in our data
-2. Fine tune the model further by utilizing the synthetic images from the YRIKKA data engine  
-
-## Acknowledgements
+## 🙏 **Acknowledgements**
 We would like to thank our Challenge Advisors as well as our AI Studio Coach for all of their help and support throughout the entire project.
 
