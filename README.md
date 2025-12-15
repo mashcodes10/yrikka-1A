@@ -27,7 +27,7 @@ This project was completed as part of the Break Through Tech AI Program in colla
 
 - Developed a YOLO-based object detection model to study the synthetic-to-real data gap in detecting everyday objects.
 - Evaluated model performance using noisy and corrected synthetic labels, showing how label quality affects real-world results.
-- GUsed CVAT for label correction and YRIKKA’s synthetic data engine to improve training data and model reliability.
+- Used CVAT for label correction and YRIKKA’s synthetic data engine to improve training data and model reliability.
 
 ---
 
