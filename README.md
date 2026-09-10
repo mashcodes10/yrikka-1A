@@ -14,7 +14,7 @@ This project was completed as part of the Break Through Tech AI Program in colla
 | Milderd Nwachukwu-Innocent   | @Mildred1999 | Model training and evaluation, hyperparameter tuning, correct CVAT annotation, EDA, Image collection |
 | Katherin Cuautli   | @KatherinCuautli  | Image collection, correct CVAT annotation |
 | Taanyaa Haridass Prasad  | @taanyaaharidassprasad06  | Image collection, correct CVAT annotation |
-| Idranne Naike      | @    | Image Collection, correct CVAT annotation  |
+| Idranne Naike      | @idranne    | Image Collection, correct CVAT annotation  |
 | Dedeepya Pidaparthi       | @dpidaparthi | Image Collection, correct CVAT annotation |
 | Md. Mashiur Rahman Khan   | @mashcodes10 | Collect images from data engine, collect real world images |
 | Maha Shanawaz Syeda     | @mahashanawaz | Data Cleaning, Data Preprocessing, Baseline model comparison, Model Optimization, EDA, Image collection, correct CVAT annotation |
